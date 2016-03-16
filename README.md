@@ -3,17 +3,14 @@
 **Table of Contents**  
 This is a list of all the working functions. Indents mean that the item serves as a subfunction for the function above it.
  
- PointTrial
-     CreateGauss
-     focal_length
-         RadCurv
-     RefracPos
-     
- CircleLens
- 
- BiLensTrial
-     RefracPos
-     
+* PointTrial
+ * CreateGauss
+ * focal_length
+ *  RadCurv
+ * RefracPos
+* CircleLens
+* BiLensTrial
+*  RefracPos
 
 **Function Summary:**
  
