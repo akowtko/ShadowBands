@@ -1,6 +1,6 @@
 # ShadowBands
 
-**Table of Contents**
+**Table of Contents**  
 This is a list of all the working functions. Indents mean that the item serves as a subfunction for the function above it.
  
  PointTrial
@@ -17,13 +17,13 @@ This is a list of all the working functions. Indents mean that the item serves a
 
 **Function Summary:**
  
- *CreateGauss*
+ *CreateGauss*  
  Generates a Gaussian based on the normal equation for a Gaussian based on 
  user-specified height of the curve, shift along the x-axis, sigma (half the
  width of the Gaussian at one standard deviation). The final input specifies
  whether or not to plot the subsequent Gaussian.
  ----------------------------------------
- *CircleLens*
+ *CircleLens*  
  This was a test function to make sure that RadCurv and focal_length were
  working, and does not contribute to any trials. This creates part of a
  circular lens that only exists in the first two quadrants. Any part below
@@ -31,7 +31,7 @@ This is a list of all the working functions. Indents mean that the item serves a
  input the desired radius and height of the lens, where the height is the
  y-value of the circle's maximum.
  ----------------------------------------
- *RadCurv*
+ *RadCurv*  
  This calculates the radius of curvature for a lens, requiring the lens'
  function as input. This must be a *symbolic function*. it takes the first
  and second derivative of the function, solves for the first max/min, and
@@ -41,14 +41,14 @@ This is a list of all the working functions. Indents mean that the item serves a
  work for a lens with one peak because of the way that I made it search
  for the maxima/minima.
  ----------------------------------------
- *focal_length*
+ *focal_length*  
  This uses the thin lens formula to calculate the focal length of a lens.
  I'm assuming that the minimum or maximum of the lens is the first surface
  the light hits, and that the second surface upon exiting the lens is
  completely flat. The radius of curvature of the lens is calculated using
  RadCurv, so this will only work for a simple lens with one peak.
  ----------------------------------------
- *RefracPos*
+ *RefracPos*  
  This generates a beam of light at a random x-value within + or - width, a
  user-specified value. The angle of incidence (the small angle approx is
  used) is found by plugging the x-value into the derivative. The index of
@@ -59,7 +59,7 @@ This is a list of all the working functions. Indents mean that the item serves a
  surface, and the second surface is flat. In addition, this assumes a simple
  lens with one peak.
  ----------------------------------------
- *PointTrial*
+ *PointTrial*  
  This function actually runs trials with a user specified lens and randomly
  generated light beams, tracking the final x-position and graphing frequency
  at each position after a user-specified number of trials. It creates a
@@ -75,7 +75,7 @@ This is a list of all the working functions. Indents mean that the item serves a
  index and add this "count" into the count vector. A bar graph is th
  created plotting the counts at each x-value.
  
-‘’’
+```
  >>PointTrial(1.0001,1,-10,.5,2.5,10,100,0);
  Index of refraction of lens:    1.0001
  Index of refraction of air:     1
@@ -85,9 +85,9 @@ This is a list of all the working functions. Indents mean that the item serves a
  Width of Test Region:           10
  Trials:                         100
  Count Bin Resolution:           10^0 (or each integer has a bin)
-‘’’
+ ```
  ----------------------------------------
- *BiLens*
+ *BiLens*  
  Creates two Gaussians with hard-coded values at the top of the script.
  After calculating each focal length a third lens is created from adding the
  first two lenses together. Gauss1 must be further to the left and Gauss2
@@ -100,13 +100,13 @@ This is a list of all the working functions. Indents mean that the item serves a
  pre-created lens instead of creating one from scratch. BiLensTrial also
  does not calculate the focal length.
  ----------------------------------------
- *BiLensTrial*
+ *BiLensTrial*  
  Exact same as PointTrial, except personalized for the BiLens script. This
  requires the lens function and characteristics as input, and thus does not
  create a Gaussian or calculate the focal length.
  
 
- **Overall Summary**
+ **Overall Summary**  
  PointTrial and BiLens are the important functions here for testing. The
  first can be used to test different one-peak lenses in 1 dimension. It is
  pre-coded to locate the lens at the height of the lens' focal length, but
